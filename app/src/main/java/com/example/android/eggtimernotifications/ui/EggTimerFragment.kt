@@ -53,6 +53,7 @@ class EggTimerFragment : Fragment() {
         // TODO: Step 1.7 call create channel
 
         createChannel(getString(R.string.egg_notification_channel_id), getString(R.string.egg_notification_channel_name))
+        createChannel(getString(R.string.breakfast_notification_channel_id), getString(R.string.breakfast_notification_channel_name))
 
         return binding.root
     }

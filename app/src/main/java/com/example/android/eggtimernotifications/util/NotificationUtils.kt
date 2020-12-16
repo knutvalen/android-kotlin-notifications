@@ -38,10 +38,15 @@ private val FLAGS = 0
  * @param context, activity context.
  */
 fun NotificationManager.sendNotification(messageBody: String, applicationContext: Context) {
+    val intent = Intent(applicationContext, MainActivity::class.java)
+    val pendingIntent = PendingIntent.getActivity(applicationContext, NOTIFICATION_ID, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+
     val builder = NotificationCompat.Builder(applicationContext, applicationContext.getString(R.string.egg_notification_channel_id))
-            .setSmallIcon(R.drawable.cooked_egg)
-            .setContentTitle(applicationContext.getString(R.string.notification_title))
-            .setContentText(messageBody)
+        .setSmallIcon(R.drawable.cooked_egg)
+        .setContentTitle(applicationContext.getString(R.string.notification_title))
+        .setContentText(messageBody)
+        .setContentIntent(pendingIntent)
+        .setAutoCancel(true)
 
     notify(NOTIFICATION_ID, builder.build())
 }

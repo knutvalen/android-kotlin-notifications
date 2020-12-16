@@ -31,7 +31,6 @@ private val NOTIFICATION_ID = 0
 private val REQUEST_CODE = 0
 private val FLAGS = 0
 
-// TODO: Step 1.1 extension function to send messages (GIVEN)
 /**
  * Builds and delivers the notification.
  *
@@ -41,12 +40,17 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     val intent = Intent(applicationContext, MainActivity::class.java)
     val pendingIntent = PendingIntent.getActivity(applicationContext, NOTIFICATION_ID, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
+    val eggImage = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.cooked_egg)
+    val bigPictureStyle = NotificationCompat.BigPictureStyle().bigPicture(eggImage).bigLargeIcon(null)
+
     val builder = NotificationCompat.Builder(applicationContext, applicationContext.getString(R.string.egg_notification_channel_id))
         .setSmallIcon(R.drawable.cooked_egg)
         .setContentTitle(applicationContext.getString(R.string.notification_title))
         .setContentText(messageBody)
         .setContentIntent(pendingIntent)
         .setAutoCancel(true)
+        .setStyle(bigPictureStyle)
+        .setLargeIcon(eggImage)
 
     notify(NOTIFICATION_ID, builder.build())
 }

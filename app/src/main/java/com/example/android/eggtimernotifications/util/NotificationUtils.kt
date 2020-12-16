@@ -44,32 +44,6 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
             .setContentText(messageBody)
 
     notify(NOTIFICATION_ID, builder.build())
-    // Create the content intent for the notification, which launches
-    // this activity
-    // TODO: Step 1.11 create intent
-
-    // TODO: Step 1.12 create PendingIntent
-
-    // TODO: Step 2.0 add style
-
-    // TODO: Step 2.2 add snooze action
-
-    // TODO: Step 1.2 get an instance of NotificationCompat.Builder
-
-    // TODO: Step 1.8 use the new 'breakfast' notification channel
-
-    // TODO: Step 1.3 set title, text and icon to builder
-
-    // TODO: Step 1.13 set content intent
-
-        // TODO: Step 2.1 add style to builder
-
-        // TODO: Step 2.3 add snooze action
-
-        // TODO: Step 2.5 set priority
-
-    // TODO: Step 1.4 call notify
-
 }
 
 // TODO: Step 1.14 Cancel all notifications

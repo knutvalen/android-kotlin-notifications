@@ -43,6 +43,9 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     val eggImage = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.cooked_egg)
     val bigPictureStyle = NotificationCompat.BigPictureStyle().bigPicture(eggImage).bigLargeIcon(null)
 
+    val snoozeIntent = Intent(applicationContext, SnoozeReceiver::class.java)
+    val snoozePendingIntent = PendingIntent.getBroadcast(applicationContext, REQUEST_CODE, snoozeIntent, PendingIntent.FLAG_ONE_SHOT)
+
     val builder = NotificationCompat.Builder(applicationContext, applicationContext.getString(R.string.egg_notification_channel_id))
         .setSmallIcon(R.drawable.cooked_egg)
         .setContentTitle(applicationContext.getString(R.string.notification_title))
@@ -51,10 +54,7 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
         .setAutoCancel(true)
         .setStyle(bigPictureStyle)
         .setLargeIcon(eggImage)
+        .addAction(R.drawable.egg_icon, applicationContext.getString(R.string.snooze), snoozePendingIntent)
 
     notify(NOTIFICATION_ID, builder.build())
-}
-
-fun NotificationManager.cancelNotifications() {
-    cancelAll()
 }

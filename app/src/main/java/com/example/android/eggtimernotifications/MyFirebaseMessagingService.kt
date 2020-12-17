@@ -9,6 +9,10 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage?) {
         super.onMessageReceived(remoteMessage)
         Timber.i("From: ${remoteMessage?.from}")
+
+        remoteMessage?.data?.let {
+            Timber.i("Message data payload: $it")
+        }
     }
 
     override fun onNewToken(token: String?) {

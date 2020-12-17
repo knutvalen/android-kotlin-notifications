@@ -1,5 +1,8 @@
 package com.example.android.eggtimernotifications
 
+import android.app.NotificationManager
+import androidx.core.content.ContextCompat
+import com.example.android.eggtimernotifications.util.sendNotification
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import timber.log.Timber
@@ -12,6 +15,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         remoteMessage?.data?.let {
             Timber.i("Message data payload: $it")
+        }
+
+        remoteMessage?.notification?.body?.let { body ->
+            Timber.i("Message notification body: $body")
+            val notificationManager = ContextCompat.getSystemService(applicationContext, NotificationManager::class.java) as NotificationManager
+            notificationManager.sendNotification(body, applicationContext)
         }
     }
 

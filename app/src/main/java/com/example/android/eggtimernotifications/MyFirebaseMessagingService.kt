@@ -19,7 +19,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
         remoteMessage?.notification?.body?.let { body ->
             Timber.i("Message notification body: $body")
-            val notificationManager = ContextCompat.getSystemService(applicationContext, NotificationManager::class.java) as NotificationManager
+
+            val notificationManager = ContextCompat.getSystemService(
+                applicationContext,
+                NotificationManager::class.java
+            ) as NotificationManager
+
             notificationManager.sendNotification(body, applicationContext)
         }
     }
@@ -31,7 +36,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     }
 
     private fun sendTokenToServer(token: String?) {
-        //TODO
+
     }
 
 }

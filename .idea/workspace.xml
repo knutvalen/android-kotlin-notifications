@@ -33,14 +33,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881c89fe-7017-423c-afe1-e1e73e534267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/eggtimernotifications/MyFirebaseMessagingService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/eggtimernotifications/MyFirebaseMessagingService.kt" afterDir="false" />
-    </list>
+    <list default="true" id="881c89fe-7017-423c-afe1-e1e73e534267" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,6 +204,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1636" height="253" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1608204279991" />
+    <state x="532" y="280" width="639" height="490" key="find.popup" timestamp="1608205247102">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="532" y="280" width="639" height="490" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1608205247102" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1608192751424">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
